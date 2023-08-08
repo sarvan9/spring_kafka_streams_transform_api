@@ -18,7 +18,10 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.apache.kafka:kafka-streams'
+	implementation 'org.apache.kafka:kafka-clients'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	compileOnly 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
