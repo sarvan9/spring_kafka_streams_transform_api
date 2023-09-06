@@ -32,7 +32,7 @@ public class HeaderTransformerSupplier implements TransformerSupplier<String, St
         public KeyValue<String, String> transform(String key, String value) {
             Headers headers = context.headers();
             Optional<Header> internalHeader = StreamSupport.stream(headers.spliterator(), false).filter(header -> {
-                if (EventHeaders.INPUT_HEADER.equals(header.key())) {
+                if (EventHeaders.INPUT_HEADER.name().equals(header.key())) {
                     return true;
                 }
                 return false;
